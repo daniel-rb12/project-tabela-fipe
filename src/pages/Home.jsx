@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const navigate = useNavigate();
 
   const [name, setName] = useState('');
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  useMemo(() => {
+    if (name.length >= 4) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    };
+
+  }, [name]);
 
   const handleClickSave = () => {
     localStorage.setItem('name', name);
@@ -26,6 +36,7 @@ function Home() {
       <button
         type="button"
         onClick={ handleClickSave }
+        disabled={ isDisabled }
       >
         Enviar
       </button>
