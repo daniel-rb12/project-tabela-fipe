@@ -18,7 +18,7 @@ function Home() {
 
   const handleClickSave = () => {
     localStorage.setItem('name', name);
-    navigate('/marcas');
+    navigate('/brands');
   };
 
   return (
