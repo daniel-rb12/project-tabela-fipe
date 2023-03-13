@@ -1,8 +1,21 @@
-import React, { useContext} from 'react';
+import React, { useContext, useMemo, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import TypeContext from '../context/TypeContext';
 
 function Brands() {
-  const { setVehicle } = useContext(TypeContext);
+  const { vehicle, setVehicle } = useContext(TypeContext);
+
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  const navigate = useNavigate();
+
+  useMemo(() => {
+    if (vehicle.length > 0) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  }, [vehicle]);
 
   const nameLocalStorage = localStorage.getItem('name');
 
@@ -27,6 +40,8 @@ function Brands() {
         </label>
         <button
           type="button"
+          onClick={ () => navigate('/brands') }
+          disabled={ isDisabled }
         >
           Enviar
         </button>
