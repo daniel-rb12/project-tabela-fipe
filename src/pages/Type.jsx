@@ -5,7 +5,16 @@ function Brands() {
 
   return (
     <div>
-      <h2>{ `Bem-vindo, ${nameLocalStorage}. Escolha ` }</h2>
+      <h2>
+        { `Bem-vindo, ${nameLocalStorage}.
+          Escolha o tipo de veículo que deseja consultar` }
+      </h2>
+        <label htmlFor="">
+          Selecione:
+          <select name="type" id="type">
+            <option value="teste">teste</option>
+          </select>
+        </label>
     </div>
   )
 }
