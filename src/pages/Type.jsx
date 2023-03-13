@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext} from 'react';
+import TypeContext from '../context/TypeContext';
 
 function Brands() {
-  const [vehicle, setVehicle] = useState('');
+  const { setVehicle } = useContext(TypeContext);
 
   const nameLocalStorage = localStorage.getItem('name');
 
@@ -24,6 +25,11 @@ function Brands() {
               <option value="caminhoes">Caminhões</option>
           </select>
         </label>
+        <button
+          type="button"
+        >
+          Enviar
+        </button>
       </form>
     </div>
   )
