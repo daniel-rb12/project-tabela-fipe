@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import useFetch from '../hooks/useFetch';
-import TypeContext from '../context/TypeContext';
 
 function Brands() {  
-  const { vehicle } = useContext(TypeContext);
+  const vehicle = localStorage.getItem('vehicle');
     
   const url = `https://parallelum.com.br/fipe/api/v1/${vehicle}/marcas`;
 
