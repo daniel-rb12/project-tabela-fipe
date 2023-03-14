@@ -1,12 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function useFetch(url) {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = (false);
+  const [isLoading, setIsLoading] = useState(true);
 
 
   const requestAPI = async () => {
-    setIsLoading(true);
     try {
       const request = await fetch(url);
       const result = await request.json();
@@ -18,7 +17,12 @@ function useFetch(url) {
     }
   };
 
-  return { data, isLoading, requestAPI }
+  useEffect(() => {
+    requestAPI();
+  }, []);
+  
+
+  return { data, isLoading }
 }
 
 export default useFetch;
