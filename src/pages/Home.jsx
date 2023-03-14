@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
@@ -7,7 +7,7 @@ function Home() {
   const [name, setName] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
 
-  useMemo(() => {
+  useEffect(() => {
     if (name.length >= 4) {
       setIsDisabled(false);
     } else {

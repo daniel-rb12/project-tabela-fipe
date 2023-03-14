@@ -1,4 +1,4 @@
-import React, { useContext, useMemo, useState} from 'react';
+import React, { useContext, useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import TypeContext from '../context/TypeContext';
 
@@ -9,7 +9,7 @@ function Brands() {
 
   const navigate = useNavigate();
 
-  useMemo(() => {
+  useEffect(() => {
     if (vehicle.length > 0) {
       setIsDisabled(false);
     } else {
