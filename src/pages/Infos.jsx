@@ -13,9 +13,12 @@ function Infos() {
 
   const { data, isLoading } = useFetch(url);
 
+  const nameLocalStorage = localStorage.getItem('name');
+
   if (isLoading) return <h1>Carregando...</h1>
   return (
     <main>
+      <h1>{`Aqui estão as informações, ${nameLocalStorage}.`}</h1>
       <table>
         <tr>
           <th>Mês de referência:</th>

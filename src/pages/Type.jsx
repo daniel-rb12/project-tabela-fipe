@@ -28,7 +28,7 @@ function Type() {
       <form>
         <h2>
           { `Bem-vindo, ${nameLocalStorage}.
-            Escolha o tipo de veículo que deseja consultar` }
+            Escolha o tipo de veículo que deseja consultar.` }
         </h2>
         <label htmlFor="">
           Selecione:
