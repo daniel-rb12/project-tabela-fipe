@@ -5,6 +5,7 @@ import './App.css';
 import Brands from './pages/Brands';
 import Models from './pages/Models';
 import Years from './pages/Years';
+import Infos from './pages/Infos';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/brands' element={ <Brands /> } />
       <Route path='/models' element={ <Models /> } />
       <Route path='/years' element={ <Years /> } />
+      <Route path='/infos' element={ <Infos /> } />
     </Routes>
   );
 }
