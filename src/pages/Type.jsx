@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Brands() {
+function Type() {
   const [vehicle, setVehicle] = useState('');
 
   const [isDisabled, setIsDisabled] = useState(true);
@@ -54,4 +54,4 @@ function Brands() {
   )
 }
 
-export default Brands;
+export default Type;
