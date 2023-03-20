@@ -31,6 +31,7 @@ function Home() {
           id="input-name"
           value={ name }
           onChange={ ({ target }) => setName(target.value) }
+          placeholder="Como deseja ser chamado?"
         />
       </label>
       <button
