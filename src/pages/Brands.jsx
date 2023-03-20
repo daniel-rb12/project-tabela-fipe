@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
+import useHandleClickSave from '../hooks/useHandleClickSave';
 
 function Brands() {
   const [brand, setIsBrand] = useState('');
@@ -10,8 +10,7 @@ function Brands() {
   const url = `https://parallelum.com.br/fipe/api/v1/${vehicle}/marcas`;
 
   const { data, isLoading } = useFetch(url);
-
-  const navigate = useNavigate();
+  const { handleClickSave } = useHandleClickSave('brand', brand, '/models');
 
   useEffect(() => {
     if (brand.length > 0) {
@@ -20,11 +19,6 @@ function Brands() {
       setIsDisabled(true);
     }
   }, [brand]);
-
-  const handleClickSave = () => {
-    localStorage.setItem('brand', brand);
-    navigate('/models');
-  };
 
   if (isLoading) return <h1>Carregando...</h1>
   return (

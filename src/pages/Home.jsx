@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import useHandleClickSave from '../hooks/useHandleClickSave';
 
 function Home() {
-  const navigate = useNavigate();
-
   const [name, setName] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
+
+  const { handleClickSave } = useHandleClickSave('name', name, '/type');
 
   useEffect(() => {
     if (name.length >= 4) {
@@ -15,11 +15,6 @@ function Home() {
     };
 
   }, [name]);
-
-  const handleClickSave = () => {
-    localStorage.setItem('name', name);
-    navigate('/type');
-  };
 
   return (
     <form>

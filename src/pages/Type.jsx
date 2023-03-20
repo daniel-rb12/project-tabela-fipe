@@ -1,12 +1,11 @@
 import React, { useEffect, useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import useHandleClickSave from '../hooks/useHandleClickSave';
 
 function Type() {
   const [vehicle, setVehicle] = useState('');
-
   const [isDisabled, setIsDisabled] = useState(true);
 
-  const navigate = useNavigate();
+  const { handleClickSave } = useHandleClickSave('vehicle', vehicle, '/brands');
 
   useEffect(() => {
     if (vehicle.length > 0) {
@@ -17,11 +16,6 @@ function Type() {
   }, [vehicle]);
 
   const nameLocalStorage = localStorage.getItem('name');
-
-  const handleClickSave = () => {
-    localStorage.setItem('vehicle', vehicle);
-    navigate('/brands');
-  };
 
   return (
     <div>

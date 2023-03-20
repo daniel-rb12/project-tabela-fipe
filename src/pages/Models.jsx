@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
+import useHandleClickSave from '../hooks/useHandleClickSave';
 
 function Models() {
   const [model, setIsModel] = useState('');
@@ -11,13 +11,7 @@ function Models() {
   const url = `https://parallelum.com.br/fipe/api/v1/${vehicle}/marcas/${brand}/modelos`
 
   const { data, isLoading } = useFetch(url);
-
-  const navigate = useNavigate();
-
-  const handleClickSave = () => {
-    localStorage.setItem('model', model);
-    navigate('/years');
-  };
+  const { handleClickSave } = useHandleClickSave('model', model, '/years');
 
   useEffect(() => {
     if (model.length > 0) {

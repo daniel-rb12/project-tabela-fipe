@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
+import useHandleClickSave from '../hooks/useHandleClickSave';
 
 function Years() {
   const [year, setIsYear] = useState('');
@@ -12,13 +12,7 @@ function Years() {
   const url = `https://parallelum.com.br/fipe/api/v1/${vehicle}/marcas/${brand}/modelos/${model}/anos`
 
   const { data, isLoading } = useFetch(url);
-
-  const navigate = useNavigate();
-
-  const handleClickSave = () => {
-    localStorage.setItem('year', year);
-    navigate('/infos');
-  };
+  const { handleClickSave } = useHandleClickSave('year', year, '/infos');
 
   useEffect(() => {
     if (year.length > 0) {
