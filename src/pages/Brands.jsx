@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import useHandleClickSave from '../hooks/useHandleClickSave';
 
 function Brands() {
   const [brand, setIsBrand] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
+
+  const navigate = useNavigate();
 
   const vehicle = localStorage.getItem('vehicle');
   const url = `https://parallelum.com.br/fipe/api/v1/${vehicle}/marcas`;
@@ -51,6 +54,12 @@ function Brands() {
           disabled={ isDisabled }
         >
           Enviar
+        </button>
+        <button
+          type="button"
+          onClick={ () => navigate('/type') }
+        >
+          Voltar
         </button>
       </form>
     </div>

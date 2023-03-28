@@ -1,9 +1,12 @@
 import React, { useEffect, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import useHandleClickSave from '../hooks/useHandleClickSave';
 
 function Type() {
   const [vehicle, setVehicle] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
+
+  const navigate = useNavigate();
 
   const { handleClickSave } = useHandleClickSave('vehicle', vehicle, '/brands');
 
@@ -42,6 +45,12 @@ function Type() {
           disabled={ isDisabled }
         >
           Enviar
+        </button>
+        <button
+          type="button"
+          onClick={ () => navigate('/') }
+        >
+          Voltar
         </button>
       </form>
     </div>

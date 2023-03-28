@@ -57,6 +57,12 @@ function Infos() {
       </button>
       <button
         type="button"
+        onClick={ () => navigate('/years') }
+      >
+        Voltar
+      </button>
+      <button
+        type="button"
         onClick={ () => navigate('/') }
       >
         Sair

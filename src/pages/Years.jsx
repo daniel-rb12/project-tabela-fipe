@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import useHandleClickSave from '../hooks/useHandleClickSave';
 
 function Years() {
   const [year, setIsYear] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
+
+  const navigate = useNavigate();
 
   const vehicle = localStorage.getItem('vehicle');
   const brand = localStorage.getItem('brand');
@@ -53,6 +56,12 @@ function Years() {
           disabled={ isDisabled }
         >
           Enviar
+        </button>
+        <button
+          type="button"
+          onClick={ () => navigate('/models') }
+        >
+          Voltar
         </button>
       </form>
     </div>
