@@ -15,6 +15,17 @@ function Infos() {
 
   const nameLocalStorage = localStorage.getItem('name');
 
+  const renderDate = () => {
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    return `${day}/${month}/${year} - ${hours}:${minutes}:${seconds}`;
+  };
+
   if (isLoading) return <h1>Carregando...</h1>
   return (
     <main>
@@ -43,6 +54,10 @@ function Infos() {
         <tr>
           <th>Combustível:</th>
           <td>{ data.Combustivel }</td>
+        </tr>
+        <tr>
+          <th>Data da consulta:</th>
+          <td>{ renderDate() }</td>
         </tr>
         <tr>
           <th>Preço Médio:</th>
