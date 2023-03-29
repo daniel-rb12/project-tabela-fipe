@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
+import '../css/infos.css'
 
 function Infos() {
   const navigate = useNavigate();
@@ -28,60 +29,74 @@ function Infos() {
 
   if (isLoading) return <h1>Carregando...</h1>
   return (
-    <main>
-      <h1>{`Aqui estão as informações, ${nameLocalStorage}.`}</h1>
-      <table>
-        <tr>
-          <th>Mês de referência:</th>
-          <td>{ data.MesReferencia }</td>
-        </tr>
-        <tr>
-          <th>Código FIPE:</th>
-          <td>{ data.CodigoFipe }</td>
-        </tr>
-        <tr>
-          <th>Marca:</th>
-          <td>{ data.Marca }</td>
-        </tr>
-        <tr>
-          <th>Modelo:</th>
-          <td>{ data.Modelo }</td>
-        </tr>
-        <tr>
-          <th>Ano Modelo:</th>
-          <td>{ data.AnoModelo }</td>
-        </tr>
-        <tr>
-          <th>Combustível:</th>
-          <td>{ data.Combustivel }</td>
-        </tr>
-        <tr>
-          <th>Data da consulta:</th>
-          <td>{ renderDate() }</td>
-        </tr>
-        <tr>
-          <th>Preço Médio:</th>
-          <td>{ data.Valor }</td>
-        </tr>
-      </table>
-      <button
-        type="button"
-        onClick={ () => navigate('/type') }
+    <main className="vh-100 d-flex flex-column align-items-center justify-content-center">
+      <h2
+        className="text-center text-white"
+        id="info-msg"  
       >
-        Nova Consulta
-      </button>
-      <button
-        type="button"
-        onClick={ () => navigate('/years') }
-      >
-        Voltar
-      </button>
-      <button
-        type="button"
-        onClick={ () => navigate('/') }
-      >
-        Sair
-      </button>
+        { `Aqui estão as informações, ${nameLocalStorage}:` }
+      </h2>
+      <div className="table-container">
+        <table className="table table-striped border border-dark">
+          <tr className="bg-secondary text-white">
+            <th>Mês de referência:</th>
+            <td>{ data.MesReferencia }</td>
+          </tr>
+          <tr className="bg-white">
+            <th>Código FIPE:</th>
+            <td>{ data.CodigoFipe }</td>
+          </tr>
+          <tr className="bg-secondary text-white">
+            <th>Marca:</th>
+            <td>{ data.Marca }</td>
+          </tr>
+          <tr className="bg-white">
+            <th>Modelo:</th>
+            <td>{ data.Modelo }</td>
+          </tr>
+          <tr className="bg-secondary text-white">
+            <th>Ano Modelo:</th>
+            <td>{ data.AnoModelo }</td>
+          </tr>
+          <tr className="bg-white">
+            <th>Combustível:</th>
+            <td>{ data.Combustivel }</td>
+          </tr>
+          <tr className="bg-secondary text-white">
+            <th>Data da consulta:</th>
+            <td>{ renderDate() }</td>
+          </tr>
+          <tr className="bg-success text-warning">
+            <th>Preço Médio:</th>
+            <td>{ data.Valor }</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <button
+          className="btn btn-primary btn-sg mb-3 ms-2"
+          type="button"
+          onClick={ () => navigate('/type') }
+        >
+          Nova Consulta
+        </button>
+      </div>
+      <div>
+        <button
+          className="btn btn-secondary btn-sg mx-2"
+          type="button"
+          onClick={ () => navigate('/years') }
+        >
+          Voltar
+        </button>
+        <button
+          className="btn btn-danger btn-sg"
+          type="button"
+          onClick={ () => navigate('/') }
+        >
+          Sair
+        </button>
+      </div>
     </main>
   )
 }

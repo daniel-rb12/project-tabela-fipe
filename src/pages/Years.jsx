@@ -35,6 +35,7 @@ function Years() {
         <label htmlFor="years">
           Selecione:
           <select
+            className="form-select form-select-sm" aria-label=".form-select-sm example"
             name="years"
             id="years"
             onChange={ ({ target }) => setIsYear(target.value) }
@@ -51,6 +52,7 @@ function Years() {
           </select>
         </label>
         <button
+          className="btn btn-primary btn-sm"
           type="button"
           onClick={ handleClickSave }
           disabled={ isDisabled }
@@ -58,6 +60,7 @@ function Years() {
           Enviar
         </button>
         <button
+          className="btn btn-secondary btn-sm"
           type="button"
           onClick={ () => navigate('/models') }
         >

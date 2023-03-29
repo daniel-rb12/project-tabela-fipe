@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+#home-title {
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+#input-name {
+  width: 80vw;
+}
+
+@media screen and (min-width: 769px) {
+  #input-name {
+    width: 40vw;
+  }
+}

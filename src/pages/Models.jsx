@@ -34,6 +34,7 @@ function Models() {
         <label htmlFor="models">
           Selecione:
           <select
+            className="form-select form-select-sm" aria-label=".form-select-sm example"
             name="models"
             id="models"
             onChange={ ({ target }) => setIsModel(target.value) }
@@ -50,6 +51,7 @@ function Models() {
           </select>
         </label>
         <button
+          className="btn btn-primary btn-sm"
           type="button"
           onClick={ handleClickSave }
           disabled={ isDisabled }
@@ -57,6 +59,7 @@ function Models() {
           Enviar
         </button>
         <button
+          className="btn btn-secondary btn-sm"
           type="button"
           onClick={ () => navigate('/brands') }
         >

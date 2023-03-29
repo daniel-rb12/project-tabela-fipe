@@ -33,6 +33,7 @@ function Brands() {
         <label htmlFor="brands">
           Selecione:
           <select
+            className="form-select form-select-sm" aria-label=".form-select-sm example"
             name="brands"
             id="brands"
             onChange={ ({ target }) => setIsBrand(target.value) }
@@ -49,6 +50,7 @@ function Brands() {
           </select>
         </label>
         <button
+          className="btn btn-primary btn-sm"
           type="button"
           onClick={ handleClickSave }
           disabled={ isDisabled }
@@ -56,6 +58,7 @@ function Brands() {
           Enviar
         </button>
         <button
+          className="btn btn-secondary btn-sm"
           type="button"
           onClick={ () => navigate('/type') }
         >
