@@ -1,0 +1,22 @@
+form {
+  background-color: rgb(46, 46, 46);
+}
+
+#logo-fipe {
+  height: 300px;
+}
+
+#home-title {
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+#input-name {
+  width: 80vw;
+}
+
+@media screen and (min-width: 769px) {
+  #input-name {
+    width: 40vw;
+  }
+}
