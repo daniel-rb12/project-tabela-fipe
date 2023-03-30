@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import useHandleClickSave from '../hooks/useHandleClickSave';
+import '../css/models.css'
 
 function Models() {
   const [model, setIsModel] = useState('');
@@ -27,14 +28,13 @@ function Models() {
   if (isLoading) return <h1>Carregando...</h1>
   return (
     <div>
-      <form>
-        <h2>
+      <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
+        <h2 className="text-white text-center" id="h2-models">
           Desta vez, escolha o modelo do veículo.
         </h2>
         <label htmlFor="models">
-          Selecione:
           <select
-            className="form-select form-select-sm" aria-label=".form-select-sm example"
+            className="form-select form-select-sg" aria-label=".form-select-sm example"
             name="models"
             id="models"
             onChange={ ({ target }) => setIsModel(target.value) }
@@ -51,7 +51,7 @@ function Models() {
           </select>
         </label>
         <button
-          className="btn btn-primary btn-sm"
+          className="btn btn-primary btn-sg mb-2 mt-3"
           type="button"
           onClick={ handleClickSave }
           disabled={ isDisabled }
@@ -59,7 +59,7 @@ function Models() {
           Enviar
         </button>
         <button
-          className="btn btn-secondary btn-sm"
+          className="btn btn-secondary btn-sg"
           type="button"
           onClick={ () => navigate('/brands') }
         >

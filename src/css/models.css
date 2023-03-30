@@ -1,0 +1,13 @@
+#h2-models {
+    margin-bottom: 80px;
+  }
+  
+  #models {
+    width: 77vw;
+  }
+  
+  @media screen and (min-width: 537px) {
+    #models {
+      width: 40vw;
+    }
+  }
