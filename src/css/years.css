@@ -1,13 +1,13 @@
-#h2-models {
+#h2-years {
   margin-bottom: 80px;
 }
   
-#models {
+#years {
   width: 77vw;
 }
   
 @media screen and (min-width: 537px) {
-  #models {
+  #years {
     width: 40vw;
   }
 }

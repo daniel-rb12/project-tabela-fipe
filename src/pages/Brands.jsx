@@ -26,46 +26,44 @@ function Brands() {
 
   if (isLoading) return <h1>Carregando...</h1>
   return (
-    <div>
-      <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
-        <h2 className="text-white text-center" id="h2-brands">
-          Agora, escolha a marca do veículo.
-        </h2>
-        <label htmlFor="brands">
-          <select
-            className="form-select form-select-sg" aria-label=".form-select-sm example"
-            name="brands"
-            id="brands"
-            onChange={ ({ target }) => setIsBrand(target.value) }
-          >
-            <option value="">Selecione uma opção...</option>
-            { data.map((option) => (
-              <option
-                key={ option.codigo }
-                value={ option.codigo }
-              >
-                { option.nome }
-              </option>
-            )) }
-          </select>
-        </label>
-        <button
-          className="btn btn-primary btn-sg mb-2 mt-3"
-          type="button"
-          onClick={ handleClickSave }
-          disabled={ isDisabled }
+    <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
+      <h2 className="text-white text-center" id="h2-brands">
+        Agora, escolha a marca do veículo.
+      </h2>
+      <label htmlFor="brands">
+        <select
+          className="form-select form-select-sg" aria-label=".form-select-sm example"
+          name="brands"
+          id="brands"
+          onChange={ ({ target }) => setIsBrand(target.value) }
         >
-          Enviar
-        </button>
-        <button
-          className="btn btn-secondary btn-sg"
-          type="button"
-          onClick={ () => navigate('/type') }
-        >
-          Voltar
-        </button>
-      </form>
-    </div>
+          <option value="">Selecione uma opção...</option>
+          { data.map((option) => (
+            <option
+              key={ option.codigo }
+              value={ option.codigo }
+            >
+              { option.nome }
+            </option>
+          )) }
+        </select>
+      </label>
+      <button
+        className="btn btn-primary btn-sg mb-2 mt-3"
+        type="button"
+        onClick={ handleClickSave }
+        disabled={ isDisabled }
+      >
+        Enviar
+      </button>
+      <button
+        className="btn btn-secondary btn-sg"
+        type="button"
+        onClick={ () => navigate('/type') }
+      >
+        Voltar
+      </button>
+    </form>
   )
 }
 
