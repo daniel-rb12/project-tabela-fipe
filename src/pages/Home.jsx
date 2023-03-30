@@ -19,9 +19,8 @@ function Home() {
 
   return (
     <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
-      <h1 id="home-title">TABELA FIPE</h1>
+      <h1 className="text-white" id="home-title">TABELA FIPE</h1>
       <label htmlFor="input-name" className="form-label">
-        Nome:
         <input
           className="form-control text-center"
           type="text"
@@ -33,7 +32,7 @@ function Home() {
         />
       </label>
       <button
-        className="btn btn-primary btn-sm"
+        className="btn btn-primary btn-sg mt-3"
         type="button"
         onClick={ handleClickSave }
         disabled={ isDisabled }

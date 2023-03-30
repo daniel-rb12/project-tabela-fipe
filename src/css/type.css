@@ -1,0 +1,14 @@
+#h2-type {
+  width: 80%;
+  margin-bottom: 80px;
+}
+
+#type {
+  width: 77vw;
+}
+
+@media screen and (min-width: 769px) {
+  #type {
+    width: 40vw;
+  }
+  }
