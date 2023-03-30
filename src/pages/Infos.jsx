@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import Loading from '../components/Loading'
-import '../css/infos.css'
+import '../css/infos.css';
 
 function Infos() {
   const navigate = useNavigate();

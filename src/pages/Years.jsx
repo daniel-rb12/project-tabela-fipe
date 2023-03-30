@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import useHandleClickSave from '../hooks/useHandleClickSave';
 import Loading from '../components/Loading'
+import Logo from '../components/Logo';
 import '../css/years.css';
 
 function Years() {
@@ -30,6 +31,7 @@ function Years() {
   if (isLoading) return <Loading />
   return (
     <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
+      <Logo />
       <h2 className="text-white text-center" id="h2-years">
         Agora, escolha o ano do veículo.
       </h2>

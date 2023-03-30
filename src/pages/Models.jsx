@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import useHandleClickSave from '../hooks/useHandleClickSave';
 import Loading from '../components/Loading'
-import '../css/models.css'
+import Logo from '../components/Logo';
+import '../css/models.css';
 
 function Models() {
   const [model, setIsModel] = useState('');
@@ -29,6 +30,7 @@ function Models() {
   if (isLoading) return <Loading />
   return (
     <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
+      <Logo />
       <h2 className="text-white text-center" id="h2-models">
         Desta vez, escolha o modelo do veículo.
       </h2>

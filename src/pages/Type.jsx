@@ -1,7 +1,8 @@
 import React, { useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import useHandleClickSave from '../hooks/useHandleClickSave';
-import '../css/type.css'
+import Logo from '../components/Logo';
+import '../css/type.css';
 
 function Type() {
   const [vehicle, setVehicle] = useState('');
@@ -23,6 +24,7 @@ function Type() {
 
   return (
     <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
+      <Logo />
       <h2 className="text-white text-center" id="h2-type">
         { `Bem-vindo, ${nameLocalStorage}!
           Escolha o tipo de veículo que deseja consultar.` }

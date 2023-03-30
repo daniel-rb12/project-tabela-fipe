@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useHandleClickSave from '../hooks/useHandleClickSave';
+import logo from '../images/logo-tabela.png'
 import '../css/home.css'
 
 function Home() {
@@ -19,26 +20,28 @@ function Home() {
 
   return (
     <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
-      <h1 className="text-white" id="home-title">TABELA FIPE</h1>
-      <label htmlFor="input-name" className="form-label">
-        <input
-          className="form-control text-center"
-          type="text"
-          name="input-name"
-          id="input-name"
-          value={ name }
-          onChange={ ({ target }) => setName(target.value) }
-          placeholder="Como gostaria de ser chamado?"
-        />
-      </label>
-      <button
-        className="btn btn-primary btn-sg mt-3"
-        type="button"
-        onClick={ handleClickSave }
-        disabled={ isDisabled }
-      >
-        Enviar
-      </button>
+      <img id="logo-fipe" src={ logo } alt="logo tipo da tabela fipe" />
+      <div className="d-flex flex-column align-items-center">
+        <label htmlFor="input-name" className="form-label">
+          <input
+            className="form-control text-center"
+            type="text"
+            name="input-name"
+            id="input-name"
+            value={ name }
+            onChange={ ({ target }) => setName(target.value) }
+            placeholder="Como gostaria de ser chamado?"
+          />
+        </label>
+        <button
+          className="btn btn-primary btn-sg mt-3"
+          type="button"
+          onClick={ handleClickSave }
+          disabled={ isDisabled }
+        >
+          Enviar
+        </button>
+      </div>
     </form>
   )
 }
