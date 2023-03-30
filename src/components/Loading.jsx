@@ -1,9 +1,15 @@
 import React from 'react'
+import '../css/loading.css'
 
 function Loading() {
   return (
-    <div>
-      <h1>Carregando...</h1>
+    <div
+      id="bg-load"
+      className="vh-100 d-flex flex-column align-items-center justify-content-center"
+    >
+        <div id="spn" className="spinner-border text-info" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
     </div>
   )
 }
