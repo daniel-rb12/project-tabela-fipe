@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import useHandleClickSave from '../hooks/useHandleClickSave';
+import Loading from '../components/Loading'
 import '../css/years.css';
 
 function Years() {
@@ -26,7 +27,7 @@ function Years() {
     }
   }, [year]);
 
-  if (isLoading) return <h1>Carregando...</h1>
+  if (isLoading) return <Loading />
   return (
     <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
       <h2 className="text-white text-center" id="h2-years">

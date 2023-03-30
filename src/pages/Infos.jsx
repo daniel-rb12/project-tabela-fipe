@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
+import Loading from '../components/Loading'
 import '../css/infos.css'
 
 function Infos() {
@@ -27,7 +28,7 @@ function Infos() {
     return `${day}/${month}/${year} - ${hours}:${minutes}:${seconds}`;
   };
 
-  if (isLoading) return <h1>Carregando...</h1>
+  if (isLoading) return <Loading />
   return (
     <main className="vh-100 d-flex flex-column align-items-center justify-content-center">
       <h2
