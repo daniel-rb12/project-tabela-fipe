@@ -30,7 +30,7 @@ function Years() {
   return (
     <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
       <h2 className="text-white text-center" id="h2-years">
-        Por vez, escolha o ano do veículo.
+        Agora, escolha o ano do veículo.
       </h2>
       <label htmlFor="years">
         <select

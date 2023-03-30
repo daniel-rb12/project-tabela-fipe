@@ -23,3 +23,9 @@ th {
 .tr1 {
   background-color: rgb(77, 77, 77);
 }
+
+@media screen and (min-width: 580px) {
+  .table-container {
+    width: 40vw;
+  }
+}
