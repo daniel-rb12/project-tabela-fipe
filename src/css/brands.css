@@ -1,14 +1,14 @@
-#h2-type {
+#h2-brands {
   width: 80%;
   margin-bottom: 80px;
 }
 
-#type {
+#brands {
   width: 77vw;
 }
 
 @media screen and (min-width: 537px) {
-  #type {
+  #brands {
     width: 40vw;
   }
 }
