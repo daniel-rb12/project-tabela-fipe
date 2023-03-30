@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/project-tabela-fipe/static/css/main.874bb3d3.css",
+    "main.js": "/project-tabela-fipe/static/js/main.72c0a7bf.js",
+    "static/media/logo-tabela.png": "/project-tabela-fipe/static/media/logo-tabela.fd3b95349639da9abc83.png",
+    "index.html": "/project-tabela-fipe/index.html",
+    "main.874bb3d3.css.map": "/project-tabela-fipe/static/css/main.874bb3d3.css.map",
+    "main.72c0a7bf.js.map": "/project-tabela-fipe/static/js/main.72c0a7bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.874bb3d3.css",
+    "static/js/main.72c0a7bf.js"
+  ]
+}
