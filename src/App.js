@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Type from './pages/Type'
-import './App.css';
 import Brands from './pages/Brands';
 import Models from './pages/Models';
 import Years from './pages/Years';

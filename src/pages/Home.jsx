@@ -19,7 +19,7 @@ function Home() {
   }, [name]);
 
   return (
-    <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
+    <form className="min-vh-100 d-flex flex-column align-items-center justify-content-center">
       <img id="logo-fipe" src={ logo } alt="logo tipo da tabela fipe" />
       <div className="d-flex flex-column align-items-center">
         <label htmlFor="input-name" className="form-label">

@@ -23,7 +23,7 @@ function Type() {
   const nameLocalStorage = localStorage.getItem('name');
 
   return (
-    <form className="vh-100 d-flex flex-column align-items-center justify-content-center">
+    <form className="min-vh-100 d-flex flex-column align-items-center justify-content-center">
       <Logo />
       <h2 className="text-white text-center" id="h2-type">
         { `Bem-vindo, ${nameLocalStorage}!

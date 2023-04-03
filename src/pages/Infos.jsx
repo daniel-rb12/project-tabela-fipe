@@ -30,7 +30,7 @@ function Infos() {
 
   if (isLoading) return <Loading />
   return (
-    <main className="vh-100 d-flex flex-column align-items-center justify-content-center">
+    <main className="min-vh-100 d-flex flex-column align-items-center justify-content-center">
       <h2
         className="text-center text-white"
         id="info-msg"  
@@ -39,38 +39,40 @@ function Infos() {
       </h2>
       <div className="table-container">
         <table className="table table-striped border border-dark">
-          <tr className="bg-secondary text-white">
-            <th>Mês de referência:</th>
-            <td>{ data.MesReferencia }</td>
-          </tr>
-          <tr className="bg-white">
-            <th>Código FIPE:</th>
-            <td>{ data.CodigoFipe }</td>
-          </tr>
-          <tr className="bg-secondary text-white">
-            <th>Marca:</th>
-            <td>{ data.Marca }</td>
-          </tr>
-          <tr className="bg-white">
-            <th>Modelo:</th>
-            <td>{ data.Modelo }</td>
-          </tr>
-          <tr className="bg-secondary text-white">
-            <th>Ano Modelo:</th>
-            <td>{ data.AnoModelo }</td>
-          </tr>
-          <tr className="bg-white">
-            <th>Combustível:</th>
-            <td>{ data.Combustivel }</td>
-          </tr>
-          <tr className="bg-secondary text-white">
-            <th>Data da consulta:</th>
-            <td>{ renderDate() }</td>
-          </tr>
-          <tr className="bg-success text-warning">
-            <th>Preço Médio:</th>
-            <td>{ data.Valor }</td>
-          </tr>
+          <tbody>
+            <tr className="bg-secondary text-white">
+              <th>Mês de referência:</th>
+              <td>{ data.MesReferencia }</td>
+            </tr>
+            <tr className="bg-white">
+              <th>Código FIPE:</th>
+              <td>{ data.CodigoFipe }</td>
+            </tr>
+            <tr className="bg-secondary text-white">
+              <th>Marca:</th>
+              <td>{ data.Marca }</td>
+            </tr>
+            <tr className="bg-white">
+              <th>Modelo:</th>
+              <td>{ data.Modelo }</td>
+            </tr>
+            <tr className="bg-secondary text-white">
+              <th>Ano Modelo:</th>
+              <td>{ data.AnoModelo === 32000 ? 'Zero KM' : data.AnoModelo }</td>
+            </tr>
+            <tr className="bg-white">
+              <th>Combustível:</th>
+              <td>{ data.Combustivel }</td>
+            </tr>
+            <tr className="bg-secondary text-white">
+              <th>Data da consulta:</th>
+              <td>{ renderDate() }</td>
+            </tr>
+            <tr className="bg-success text-warning">
+              <th>Preço Médio:</th>
+              <td>{ data.Valor }</td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <div>
