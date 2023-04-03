@@ -48,7 +48,7 @@ function Years() {
               key={ option.codigo }
               value={ option.codigo }
             >
-              { option.nome }
+              { option.nome.includes("32000") ? 'Zero KM' : option.nome }
             </option>
           )) }
         </select>

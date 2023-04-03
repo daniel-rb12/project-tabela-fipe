@@ -57,7 +57,7 @@ function Infos() {
           </tr>
           <tr className="bg-secondary text-white">
             <th>Ano Modelo:</th>
-            <td>{ data.AnoModelo }</td>
+            <td>{ data.AnoModelo === 32000 ? 'Zero KM' : data.AnoModelo }</td>
           </tr>
           <tr className="bg-white">
             <th>Combustível:</th>
