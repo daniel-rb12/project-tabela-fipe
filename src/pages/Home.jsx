@@ -30,7 +30,7 @@ function Home() {
             id="input-name"
             value={ name }
             onChange={ ({ target }) => setName(target.value) }
-            placeholder="Como gostaria de ser chamado?"
+            placeholder="Como gostaria de ser chamado(a)?"
           />
         </label>
         <button
