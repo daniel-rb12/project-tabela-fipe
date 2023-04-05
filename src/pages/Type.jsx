@@ -26,7 +26,7 @@ function Type() {
     <form className="min-vh-100 d-flex flex-column align-items-center justify-content-center">
       <Logo />
       <h2 className="text-white text-center" id="h2-type">
-        { `Bem-vindo, ${nameLocalStorage}!
+        { `Bem-vindo(a), ${nameLocalStorage}!
           Escolha o tipo de veículo que deseja consultar.` }
       </h2>
       <div>
