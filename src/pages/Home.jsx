@@ -18,6 +18,10 @@ function Home() {
 
   }, [name]);
 
+  const handleChange = ({ target }) => {
+    if (target.value.length <= 20) setName(target.value);
+  };
+
   return (
     <form className="min-vh-100 d-flex flex-column align-items-center justify-content-center">
       <img id="logo-fipe" src={ logo } alt="logo tipo da tabela fipe" />
@@ -29,7 +33,8 @@ function Home() {
             name="input-name"
             id="input-name"
             value={ name }
-            onChange={ ({ target }) => setName(target.value) }
+            onChange={ handleChange }
+            maxLength="20"
             placeholder="Como gostaria de ser chamado(a)?"
           />
         </label>
